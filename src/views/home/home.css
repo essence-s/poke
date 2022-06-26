@@ -1,0 +1,17 @@
+.home{
+  max-width: 400px;
+  height: 100vh;
+  background: #444444;
+  /* border: solid 1px black; */
+  margin: auto;
+  padding: 10px; 
+}
+
+.pokemones{
+  display: grid;
+  grid-template-columns: repeat(2,140px);
+  justify-content: center;
+  gap: 10px;
+}
+
+
