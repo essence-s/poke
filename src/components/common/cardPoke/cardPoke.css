@@ -3,10 +3,12 @@
   background: white; 
   border-radius: 5px;
   width: auto;
-  height: max-content;
+  height: 169px;
+  min-height: 100%;
   text-align: center;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .cardPoke-back{
   background: #21b49c;

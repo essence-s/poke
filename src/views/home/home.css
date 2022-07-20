@@ -1,7 +1,6 @@
 .home{
-  max-width: 400px;
   height: 100vh;
-  background: #444444;
+  background: #2c2c30;
   /* border: solid 1px black; */
   margin: auto;
   padding: 10px; 
@@ -9,9 +8,31 @@
 
 .pokemones{
   display: grid;
-  grid-template-columns: repeat(2,140px);
+  grid-template-columns: repeat(5,140px);
+  grid-template-rows: repeat(auto-fit,169px);
   justify-content: center;
   gap: 10px;
+  color: #141415;
+}
+
+.pokeload{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px){
+  .pokemones{
+    grid-template-columns: repeat(3,140px);
+  }
+}
+
+@media screen and (max-width: 700px){
+  .pokemones{
+    grid-template-columns: repeat(2,140px);
+  }
 }
 
 

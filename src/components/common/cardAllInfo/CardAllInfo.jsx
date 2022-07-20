@@ -2,16 +2,18 @@ import React, {useEffect, useState} from "react";
 import CardPoke from "../cardPoke/CardPoke";
 import './cardAllInfo.css'
 
+import loadPoke from 'assets/load.gif'
+
 import {listPokeData,getPokeSpecies,getEvolutionChain, getPokeImg} from "services/serPoke/gPoke"
 
 const CardAllInfo = ({setState,state,data}) =>{
 
-  console.log(data)
+  // console.log(data)
   let [dataPokeSpecies,setDataPokeSpecies] = useState()
   let [dataEvolutionChain,setDataEvolutionChain] = useState([])
 
   const pokeSpecies = async (url) =>{
-    console.log(url)
+    // console.log(url)
     if(!url)return
     let resPoSp = await getPokeSpecies(url)
     setDataPokeSpecies(resPoSp)
@@ -35,21 +37,22 @@ const CardAllInfo = ({setState,state,data}) =>{
     let resP=await Promise.all(promises)
     setDataEvolutionChain(resP)
 
-    setTimeout(()=>console.log(resP),5000)
+    // setTimeout(()=>console.log(resP),5000)
   }
 // setTimeout(()=>console.log(dataPokeSpecies),5000)
 
   let onArrowCLose = ()=>{
     setState(false)
     setDataPokeSpecies(null)
+    setDataEvolutionChain([])
   }
 
   useEffect(()=>{
     if(Object.entries(data).length>0){
       pokeSpecies(data?.species?.url)
-       console.log(data)
+       // console.log(data)
     }
-     console.log(Object.entries(data))
+     // console.log(Object.entries(data))
    
   },[data])
     
@@ -58,11 +61,11 @@ const CardAllInfo = ({setState,state,data}) =>{
     state&&
     <div className="cardAllInfo">
 
-      <div className="cardAllInfo-container">
-
         <div className="cardAllInfo-arrowClose" onClick={()=>onArrowCLose()}>
           <i className="fa fa-arrow-left" aria-hidden="true"></i>
         </div>
+
+      <div className="cardAllInfo-container">
         
         
         
@@ -94,10 +97,10 @@ const CardAllInfo = ({setState,state,data}) =>{
         <div className="cardAllInfo-evolutionChain">
           <div className="cardAllInfo-title">Evolution</div>
           <div className="cardAllInfo-evolutionImg">
-          {dataEvolutionChain.map((img)=>{
-            console.log(img)
-            return img&&<img src={img} alt=""/>
-          })}
+            {dataEvolutionChain.length>0?dataEvolutionChain.map((img,i)=>{
+            // console.log(img)
+            return img&&<img key={i} src={img} alt=""/>
+            }): <img src={loadPoke}></img>}
           </div>
          
         </div>

@@ -9,13 +9,13 @@
   align-items: center;
 }
 .cardAllInfo-container{
-  background: #ffffff;
+  background: #fff;
   width: 90%;
   height: 90%;
   border-radius: 5px;
-  padding: 20px;
+  padding: 25px 35px;
   display: grid;
-  gap: 25px;
+  gap: 30px;
   grid-template-columns: repeat(2,auto);
   position: relative;
   overflow: auto;
@@ -30,8 +30,8 @@
 
 .cardAllInfo-arrowClose{
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 50px;
+  left: 50px;
   padding: 5px 10px;
   z-index: 1;
   font-size: 1.4rem;
@@ -83,7 +83,7 @@
 
 
 .cardAllInfo-stats{
-  padding: 0;
+  padding: 10px 20px;
 }
 .cardAllInfo-statsContent{
   display: grid;
@@ -91,6 +91,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding: 5px;
 }
 .cardAllInfo-statsItem{
   display: flex;
@@ -120,8 +121,8 @@
   }
 
   .cardAllInfo-arrowClose{
-    top: 10px;
-    left: 5px; 
+    top: 14px;
+    left: 6px; 
   }
 
 }

@@ -20,7 +20,7 @@ const getPokeImg = async(numbername) =>{
     let url = `https://pokeapi.co/api/v2/pokemon/${numbername}`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data.sprites.front_default)
+    // console.log(data.sprites.front_default)
     return data.sprites.front_default
   }catch(e){
     console.log(e)
@@ -41,7 +41,7 @@ const getPokeSpecies = async(url) =>{
   try{
     let response = await fetch(url)
     let data = await response.json()
-    console.log(data)
+    // console.log(data)
     return data
   }catch(e){
     console.log(e)
