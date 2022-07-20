@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/poke/static/css/main.84a057be.css",
+    "main.css": "/poke/static/css/main.fed9672a.css",
     "main.js": "/poke/static/js/main.d0018bd7.js",
     "static/js/787.08161dd4.chunk.js": "/poke/static/js/787.08161dd4.chunk.js",
     "static/media/load.gif": "/poke/static/media/load.87e1fb0e29db28ee0414.gif",
     "static/media/logo.svg": "/poke/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/poke/index.html",
-    "main.84a057be.css.map": "/poke/static/css/main.84a057be.css.map",
+    "main.fed9672a.css.map": "/poke/static/css/main.fed9672a.css.map",
     "main.d0018bd7.js.map": "/poke/static/js/main.d0018bd7.js.map",
     "787.08161dd4.chunk.js.map": "/poke/static/js/787.08161dd4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84a057be.css",
+    "static/css/main.fed9672a.css",
     "static/js/main.d0018bd7.js"
   ]
 }
