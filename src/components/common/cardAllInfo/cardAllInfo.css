@@ -31,7 +31,7 @@
 .cardAllInfo-arrowClose{
   position: absolute;
   top: 50px;
-  left: 50px;
+  left: 6%;
   padding: 5px 10px;
   z-index: 1;
   font-size: 1.4rem;

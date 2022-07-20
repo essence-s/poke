@@ -9,6 +9,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .cardPoke-back{
   background: #21b49c;
@@ -26,8 +28,8 @@
   height: 95px;
   position: absolute;
   border-radius: 50%;
-  top: 10px;
-  left: 36%;
+  /* top: 10px; */
+  /* left: 36%; */
   opacity: 0.1;
 }
 
