@@ -1,53 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { CardAllInfo } from "components/common";
+import React, { useEffect } from "react";
 import CardPoke from "components/common/cardPoke/CardPoke";
-import { listPoke, listPokeData, getTypesPoke } from "services/serPoke/gPoke";
 import "./home.css";
 import load from "./files/load.gif";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { usePokemon } from "hooks/usePokemon";
 
 const Home = () => {
-  let [pokemonesData, setPokemonData] = useState([]);
-
-  let listDataPokemon = async () => {
-    let pokemoness = await listPoke();
-    // console.log(pokemoness.results)
-    const promises = pokemoness.results.map(async (pokemon) => {
-      return await listPokeData(pokemon.url);
-    });
-    const results1 = await Promise.all(promises);
-
-    setPokemonData(results1);
-  };
-  let [stateModal, setStateModal] = useState(false);
-  let [dataModal, setDataModal] = useState({});
-
-  let onModal = (data) => {
-    setStateModal(true);
-    setDataModal(data);
-  };
+  let { pokemonsData, getDataPokemons } = usePokemon();
+  let location = useLocation();
 
   useEffect(() => {
-    listDataPokemon();
-  }, []);
+    getDataPokemons();
+  },[]);
 
   return (
     <div className="home">
-      {pokemonesData.length > 0 ? (
+      {pokemonsData.length > 0 ? (
         <div className="pokemones">
-          <CardAllInfo
-            setState={setStateModal}
-            state={stateModal}
-            data={dataModal}
-          ></CardAllInfo>
-          {pokemonesData.map((r) => (
-            <CardPoke
+          {pokemonsData.map((r) => (
+            <Link
+              to={`/poke/${r.name}`}
               key={r.name}
-              data={r}
-              onClick={() => onModal(r)}
-            ></CardPoke>
+              state={{ background: location, dataPoke: r }}
+              className="home-link"
+            >
+              <CardPoke data={r}></CardPoke>
+            </Link>
           ))}
+
+          <Outlet></Outlet>
         </div>
-      ) : <img className="pokeload" src={load} alt="" />}
+      ) : (
+        <img className="pokeload" src={load} alt="" />
+      )}
     </div>
   );
 };

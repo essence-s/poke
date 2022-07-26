@@ -17,6 +17,7 @@ const listPokeData = async(url) =>{
 
 const getPokeImg = async(numbername) =>{
   try{
+    if (!numbername) return
     let url = `https://pokeapi.co/api/v2/pokemon/${numbername}`
     const response = await fetch(url)
     const data = await response.json()
