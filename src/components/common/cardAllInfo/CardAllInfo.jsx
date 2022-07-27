@@ -54,7 +54,7 @@ const CardAllInfo = ({ setState, state }) => {
   let onArrowCLose = () => {
     setDataPokeSpecies(null);
     setDataEvolutionChain([]);
-    parametros.state ? navigate(-1) : navigate("/poke");
+    parametros.state ? navigate(-1) : navigate("/");
   };
 
   useEffect(() => {

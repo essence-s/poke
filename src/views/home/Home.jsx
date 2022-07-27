@@ -19,7 +19,7 @@ const Home = () => {
         <div className="pokemones">
           {pokemonsData.map((r) => (
             <Link
-              to={`/poke/${r.name}`}
+              to={`/pokemon/${r.name}`}
               key={r.name}
               state={{ background: location, dataPoke: r }}
               className="home-link"
