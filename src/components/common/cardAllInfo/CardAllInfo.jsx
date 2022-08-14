@@ -61,7 +61,7 @@ const CardAllInfo = ({ setState, state }) => {
     if (Object.entries(data).length > 0) {
       pokeSpecies(data?.species?.url);
     }
-  },[]);
+  }, []);
 
   // useEffect(()=>{
   //   // console.log(parametros)
@@ -108,11 +108,11 @@ const CardAllInfo = ({ setState, state }) => {
             <div className="cardAllInfo-title">Evolution</div>
             <div className="cardAllInfo-evolutionImg">
               {dataEvolutionChain.length > 0 ? (
-                dataEvolutionChain.map((img, i) => {
-                  return img && <img key={i} src={img} alt="" />;
+                dataEvolutionChain.map((d, i) => {
+                  return d && <CardPoke key={i} data={d} design={2}></CardPoke>;
                 })
               ) : (
-                <img src={loadPoke} alt="loader" />
+                <img src={loadPoke} className='cardAllInfo__img-loader' alt="loader" />
               )}
             </div>
           </div>

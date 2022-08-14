@@ -96,8 +96,11 @@ const CardPoke = ({ data = {}, design = 1, ...others }) => {
         style={{ background: colorback }}
       ></div>
       <div className="cardPoke-container">
-        <img src={data?.sprites?.front_default} alt="" />
-        <div className="cardPoke-name">{data.name}</div>
+        <div className="cardPoke__img">
+          <img src={data?.sprites?.front_default} alt="no img" />
+        </div>
+
+        <div className="cardPoke-name">{data.name.replace(/-/g,' ')}</div>
 
         <div className="cardPoke-types">
           {!isvoid &&

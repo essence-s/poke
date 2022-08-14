@@ -6,39 +6,14 @@
   margin: auto;
   padding: 10px; 
 }
-
-.home-link{
-  text-decoration: none;
-  color: inherit;
+.home__search{
+  margin: 50px auto;
+  position: sticky;
+  top: 22px;
+  z-index: 1;
+  border: solid 2px #2c2c30;
 }
 
-.pokemones{
-  display: grid;
-  grid-template-columns: repeat(5,140px);
-  grid-template-rows: repeat(auto-fit,169px);
-  justify-content: center;
-  gap: 10px;
-  color: #141415;
-}
 
-.pokeload{
-  position: relative;
-  left: 50vw;
-  top: 50vh;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 900px){
-  .pokemones{
-    grid-template-columns: repeat(3,140px);
-  }
-}
-
-@media screen and (max-width: 700px){
-  .pokemones{
-    grid-template-columns: repeat(2,140px);
-  }
-}
 
 

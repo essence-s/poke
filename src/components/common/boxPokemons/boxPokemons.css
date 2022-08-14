@@ -1,0 +1,32 @@
+.boxPokemons{
+  display: grid;
+  grid-template-columns: repeat(5,145px);
+  /* grid-template-rows: repeat(auto-fit,169px); */
+  justify-content: center;
+  gap: 10px;
+  color: #141415;
+}
+
+.boxPokemons__pokeload{
+  position: relative;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.boxPokemons__link{
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 900px){
+  .pokemons{
+    grid-template-columns: repeat(3,140px);
+  }
+}
+
+@media screen and (max-width: 700px){
+  .pokemons{
+    grid-template-columns: repeat(2,140px);
+  }
+}

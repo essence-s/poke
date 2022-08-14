@@ -1,16 +1,18 @@
 .cardPoke{
-  padding: 15px;
+  padding: 5px 10px;
   background: white; 
   border-radius: 5px;
   width: auto;
-  height: 169px;
-  min-height: 100%;
+  height: 178px;
+  /* min-height: 100%; */
   text-align: center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 15px;
 }
 .cardPoke-back{
   background: #21b49c;
@@ -24,11 +26,11 @@
 }
 .cardPoke-back2{
   background: #21b49c;
-  width: 100px;
-  height: 95px;
+  width: 96px;
+  height: 92px;
   position: absolute;
   border-radius: 50%;
-  /* top: 10px; */
+  top: 15%;
   /* left: 36%; */
   opacity: 0.1;
 }
@@ -36,7 +38,14 @@
 .cardPoke-container{
   position: relative;
 }
-
+.cardPoke__img{
+  /* width: 96px; */
+  height: 96px;
+  object-fit: cover;
+}
+.cardPoke__img img{
+  height: 100%;
+}
 .cardPoke-name{
   text-transform: capitalize; 
   margin-bottom: 5px;
